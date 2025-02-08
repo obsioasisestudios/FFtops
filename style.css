@@ -1,437 +1,419 @@
+/* style.css */
+
+/* General body and font settings */
 body {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #000;
-  color: #fff;
-  overflow-x: hidden;
+  background-color: #f0f8ff;
+  color: #333;
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s; /* For dark mode transition */
 }
 
-/* Galaxy Background */
-.galaxy-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('galaxy-background.jpg') repeat;
-  opacity: 0.7;
-  z-index: -1;
-  animation: pan 60s linear infinite;
+body.dark-mode {
+  background-color: #222;
+  color: #ddd;
 }
 
-@keyframes pan {
-  100% {
-    background-position: 100% 0;
-  }
+/* Main wiki container */
+#wiki-content {
+  max-width: 85%;
+  margin: 20px auto;
+  padding: 25px;
+  background-color: #fff;
+  border: 4px solid #77b5fe;
+  border-radius: 12px;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s; /* For dark mode transition */
 }
 
-header {
-  text-align: center;
-  padding: 50px;
+body.dark-mode #wiki-content {
+  background-color: #333;
+  border-color: #555;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Neon Text Effects */
-.neon-blue {
-  color: #4af;
-  text-shadow: 0 0 10px #4af, 0 0 20px #4af, 0 0 30px #4af;
-  font-size: 3em;
+/* Headers */
+h1 {
+  color: #0056b3;
+  text-shadow: 2px 2px 4px #bde2ff;
+  font-size: 2.5em;
+  transition: color 0.3s, text-shadow 0.3s; /* For dark mode transition */
 }
 
-.neon-text {
-  color: #4af;
-  text-shadow: 0 0 5px #4af, 0 0 10px #4af;
+body.dark-mode h1 {
+  color: #66a3ff;
+  text-shadow: 2px 2px 4px #000;
 }
 
-/* Floating Elements */
-.floating-purple {
-  color: #a7f;
-  text-shadow: 0 0 5px #a7f, 0 0 10px #a7f;
-  animation: float 3s linear infinite;
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-/* Holographic Button */
-.holographic-button {
-  background-color: rgba(74, 170, 255, 0.2);
-  color: #fff;
-  border: 1px solid #4af;
-  padding: 15px 30px;
-  font-size: 1.2em;
-  cursor: pointer;
-  border-radius: 5px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  box-shadow: 0 0 10px #4af;
-  transition: all 0.3s ease;
-}
-
-.holographic-button:hover {
-  background-color: rgba(74, 170, 255, 0.5);
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #4af;
-}
-
-/* Sections */
-section {
-  padding: 50px;
-  margin: 20px;
-  border: 1px solid rgba(74, 170, 255, 0.1);
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-section h2 {
-  color: #4af;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-/* Features Section */
-#features {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.feature-panel {
-  width: 300px;
-  padding: 20px;
-  margin: 10px;
-  border: 1px solid rgba(74, 170, 255, 0.2);
-  border-radius: 5px;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-.hologram-icon {
+h2 {
+  color: #2e86ab;
   font-size: 2em;
-  color: #4af;
-  text-shadow: 0 0 5px #4af, 0 0 10px #4af;
-  margin-bottom: 10px;
+  transition: color 0.3s; /* For dark mode transition */
 }
 
-/* Commands Section */
-#commands {
-  overflow-x: auto; 
+body.dark-mode h2 {
+  color: #77c4d3;
 }
 
-.command-table table {
+h3 {
+  color: #3cb371;
+  font-size: 1.6em;
+  transition: color 0.3s; /* For dark mode transition */
+}
+
+body.dark-mode h3 {
+  color: #90ee90;
+}
+
+/* Paragraphs */
+p {
+  font-size: 17px;
+  line-height: 1.7;
+  letter-spacing: 0.6px;
+  transition: color 0.3s; /* For dark mode transition */
+}
+
+body.dark-mode p {
+  color: #ddd;
+}
+
+/* Links */
+a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+body.dark-mode a {
+  color: #90caf9;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+body.dark-mode a:hover {
+  color: #66a3ff;
+}
+
+/* Collapsible button styles */
+.collapsible {
+  background-color: #b0e2ff;
+  color: #333;
+  cursor: pointer;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 17px;
+  border-radius: 6px;
+  margin-bottom: 3px;
+  transition: background-color 0.3s ease, color 0.3s;
+  font-weight: bold;
+}
+
+body.dark-mode .collapsible {
+  background-color: #555;
+  color: #eee;
+}
+
+.collapsible:hover {
+  background-color: #9ad3ff;
+}
+
+body.dark-mode .collapsible:hover {
+  background-color: #777;
+}
+
+.collapsible:after {
+  content: '\25BE';
+  font-size: 18px;
+  float: right;
+  margin-left: 5px;
+  color: #555;
+  transition: color 0.3s;
+}
+
+body.dark-mode .collapsible:after {
+  color: #ccc;
+}
+
+.collapsible.active:after {
+  content: "\25B4";
+}
+
+/* Content under collapsible buttons */
+.content {
+  padding: 0 15px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, background-color 0.3s;
+  background-color: #e6f7ff;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+
+body.dark-mode .content {
+  background-color: #444;
+}
+
+/* Table styles */
+table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  margin-top: 12px;
 }
 
-.command-table th, .command-table td {
-  padding: 12px 15px;
+th,
+td {
+  padding: 10px 12px;
   text-align: left;
-  border-bottom: 1px solid rgba(74, 170, 255, 0.2);
+  border-bottom: 1px solid #a8d0e6;
+  transition: border-color 0.3s, color 0.3s;
 }
 
-.command-table th {
-  background-color: rgba(74, 170, 255, 0.1);
-  color: #4af;
+body.dark-mode th,
+body.dark-mode td {
+  border-color: #666;
+  color: #ddd;
 }
 
-/* API Section */
-#api .code-panel {
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 20px;
-  border-radius: 5px;
+th {
+  background-color: #a8d0e6;
+  color: #333;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode th {
+  background-color: #666;
+  color: #eee;
+}
+
+/* Code block styles */
+pre {
+  background-color: #f2f2f2;
+  border-radius: 6px;
+  padding: 12px;
   overflow-x: auto;
+  font-family: 'Courier New', monospace;
+  border: 1px solid #ccc;
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
-#api pre {
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
-/* NPC Creation Section */
-#npc-creation .npc-example {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin-top: 20px;
-}
-
-.hologram-npc {
-  width: 150px;
-  padding: 15px;
-  border: 1px solid #4af;
-  border-radius: 5px;
-  text-align: center;
-  color: #4af;
-  text-shadow: 0 0 5px #4af;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-.hologram-npc .name {
-  font-size: 1.2em;
-  margin-bottom: 5px;
-}
-
-/* Interactive Menus Section */
-#interactive-menus .menu-screenshot {
-  text-align: center;
-  margin-top: 20px;
-}
-
-#interactive-menus img {
-  max-width: 80%;
-  border: 1px solid #4af;
-  border-radius: 5px;
-}
-
-/* Download Links Section */
-#download-links .download-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 30px;
-}
-
-.scan-button {
-  display: inline-block;
-  padding: 15px 30px;
-  font-size: 1.2em;
-  color: #fff;
-  background-color: rgba(74, 170, 255, 0.2);
-  border: 1px solid #4af;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.scan-button:hover {
-  background-color: rgba(74, 170, 255, 0.5);
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.8);
-  border-top: 1px solid rgba(74, 170, 255, 0.2);
-}
-
-/* Digital Text */
-.digital-text {
-  font-family: monospace;
-  color: #0f0; 
-  text-shadow: 0 0 5px #0f0;
-}
-
-/* Highlight.js theme adjustments */
-pre code.hljs {
-  padding: 1em;
-  border-radius: 5px;
-}
-
-.hljs-keyword,
-.hljs-selector-tag {
-  color: #4af; 
-}
-
-.hljs-string,
-.hljs-attribute {
-  color: #a7f; 
-}
-
-.hljs-number {
-  color: #0f0; 
-}
-
-ul {
-  list-style-type: none; 
-  padding: 0; 
-  margin: 0; 
-}
-
-ul li::before {
-  content: '✅ ';  
-  color: #0f0; 
-  text-shadow: 0 0 5px #0f0;
+body.dark-mode pre {
+  background-color: #555;
+  border-color: #888;
 }
 
 code {
-  font-family: monospace;
-  color: #0f0;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 2px 5px;
+  color: #2e7d32;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+body.dark-mode code {
+  color: #66bb6a;
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 12px;
+  background-color: #f0f8ff;
+  border-top: 1px solid #77b5fe;
+  color: #555;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+body.dark-mode footer {
+  background-color: #222;
+  border-color: #555;
+  color: #ccc;
+}
+
+/* Dyslexia-friendly styles */
+.dyslexia-friendly {
+  font-family: 'Arial', sans-serif;
+  letter-spacing: 0.08em;
+  line-height: 1.7;
+}
+
+/* Minecraft Font */
+.minecraft-font {
+  font-family: 'Minecraft', sans-serif;
+}
+
+/* Pixel Art Button */
+.pixel-button {
+  background-color: #e9ecef;
+  color: #495057;
+  border: 2px solid #adb5bd;
+  padding: 6px 12px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+body.dark-mode .pixel-button {
+  background-color: #6c757d;
+  color: #e9ecef;
+  border-color: #6c757d;
+}
+
+.pixel-button:hover {
+  background-color: #dee2e6;
+  color: #343a40;
+  border-color: #868e96;
+}
+
+body.dark-mode .pixel-button:hover {
+  background-color: #5a6268;
+  color: #fff;
+  border-color: #495057;
+}
+
+/* List styles */
+ol,
+ul {
+  padding-left: 25px;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+/* Improved table of contents */
+#wiki-content ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+#wiki-content ol li {
+  margin-bottom: 10px;
+}
+
+#wiki-content ol li button.collapsible {
+  width: auto;
+  display: block;
+  margin: 0;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: normal;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode #wiki-content ol li button.collapsible {
+  color: #eee;
+}
+
+#wiki-content ol li button.collapsible:hover {
+  background-color: #ccebff;
+}
+
+body.dark-mode #wiki-content ol li button.collapsible:hover {
+  background-color: #777;
+}
+
+/* Section title styling */
+#wiki-content .content h2 {
+  color: #2e86ab;
+  border-bottom: 2px solid #a8d0e6;
+  padding-bottom: 5px;
+  margin-top: 15px;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+body.dark-mode #wiki-content .content h2 {
+  border-color: #666;
+  color: #77c4d3;
+}
+
+/* Section paragraph styling */
+#wiki-content .content p {
+  margin-bottom: 15px;
+  transition: color 0.3s;
+}
+
+body.dark-mode #wiki-content .content p {
+  color: #ddd;
+}
+
+/* Updated code block styling within sections */
+#wiki-content .content pre {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
   border-radius: 5px;
+  padding: 10px;
+  overflow-x: auto;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
-/* Wiki styles */
-#wiki-content {
-  max-width: 80%;
-  margin: 20px auto;
+body.dark-mode #wiki-content .content pre {
+  background-color: #555;
+  border-color: #888;
+}
+
+#wiki-content .content code {
+  color: #333;
+  transition: color 0.3s;
+}
+
+body.dark-mode #wiki-content .content code {
+  color: #eee;
+}
+
+/* Header Styles */
+header {
+  text-align: center;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.8);
-  border: 1px solid rgba(74, 170, 255, 0.2);
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(74, 170, 255, 0.3);
+  background-color: #f0f8ff;
+  border-bottom: 1px solid #77b5fe;
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
-#wiki-content h1, #wiki-content h2, #wiki-content h3 {
-  color: #4af;
-  text-shadow: 0 0 5px #4af;
-  margin-bottom: 20px;
+body.dark-mode header {
+  background-color: #222;
+  border-color: #555;
 }
 
-#wiki-content h2 {
-  font-size: 2em;
-}
-
-#wiki-content h3 {
-  font-size: 1.5em;
-}
-
-#wiki-content p {
-  font-size: 1.1em;
-  line-height: 1.6;
-}
-
-#wiki-content ul {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-
-#wiki-content ul li {
+header h1 {
   margin-bottom: 5px;
 }
 
-#wiki-content table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
+header h2 {
+  margin-top: 0;
+  color: #2e86ab;
+  transition: color 0.3s;
 }
 
-#wiki-content th, #wiki-content td {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid rgba(74, 170, 255, 0.2);
+body.dark-mode header h2 {
+  color: #77c4d3;
 }
 
-#wiki-content th {
-  background-color: rgba(74, 170, 255, 0.1);
-  color: #4af;
+header p {
+  color: #555;
+  margin-bottom: 15px;
+  transition: color 0.3s;
 }
 
-#wiki-content code {
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #0f0;
-  padding: 5px;
-  border-radius: 5px;
-  font-family: monospace;
+body.dark-mode header p {
+  color: #ccc;
 }
 
-#wiki-content a {
-  color: #4af;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-#wiki-content a:hover {
-  color: #fff;
-}
-#language-selector {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 8px;
-  border-radius: 5px;
-  color: white;
-  font-size: 1em;
-}
-
-#translate-dropdown {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1em;
-  cursor: pointer;
-}
-/* 🌟 Hacer que el contenido no se salga de la pantalla en móviles */
-body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-/* 📱 Ajustes para pantallas pequeñas (celulares) */
-@media (max-width: 768px) {
-  header {
-    padding: 20px;
-    text-align: center;
-  }
-
-  /* 🏠 Ajustar tamaño del título */
-  .neon-blue {
-    font-size: 2em;
-  }
-
-  .floating-purple {
-    font-size: 1.2em;
-  }
-
-  /* 📝 Ajustar el ancho del contenido */
-  #wiki-content {
-    max-width: 95%;
-    padding: 10px;
-  }
-
-  /* 📌 Hacer que las tablas sean desplazables en móviles */
-  table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-
-  /* 🎮 Ajustar los botones en móviles */
-  .holographic-button {
-    padding: 10px 20px;
-    font-size: 1em;
-  }
-
-  /* 🌎 Hacer que el selector de idioma se vea mejor en móviles */
-  #language-selector {
-    position: relative;
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-  }
-
-  #translate-dropdown {
-    font-size: 1em;
-  }
-}
-
-/* 📱 Ajustes para pantallas muy pequeñas (menos de 480px) */
-@media (max-width: 480px) {
-  .neon-blue {
-    font-size: 1.5em;
-  }
-
-  .floating-purple {
-    font-size: 1em;
-  }
-
-  /* 🎮 Hacer que los botones sean más grandes en pantallas pequeñas */
-  .holographic-button {
-    width: 100%;
-    padding: 15px;
-  }
-
-  /* 📖 Ajustar la tabla de comandos */
-  .command-table table {
-    font-size: 0.9em;
-  }
+/* Button Container */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
