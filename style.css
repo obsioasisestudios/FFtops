@@ -5,15 +5,15 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #DEE3E6;
-  color: #343a40;
+  background-color: #E0F2F1;
+  color: #212529;
   line-height: 1.6;
   transition: background-color 0.3s, color 0.3s;
 }
 
 body.dark-mode {
-  background-color: #343a40;
-  color: #DEE3E6;
+  background-color: #333333;
+  color: #ECEFF1;
 }
 
 /* Main wiki container */
@@ -21,50 +21,50 @@ body.dark-mode {
   max-width: 85%;
   margin: 20px auto;
   padding: 25px;
-  background-color: #E9ECEF;
-  border: 4px solid #ADB5BD;
+  background-color: #FAFAFA;
+  border: 4px solid #81D4FA;
   border-radius: 12px;
   box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.15);
   transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 
 body.dark-mode #wiki-content {
-  background-color: #495057;
-  border-color: #6C757D;
+  background-color: #424242;
+  border-color: #64B5F6;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Headers */
 h1 {
-  color: #212529;
-  text-shadow: 2px 2px 4px #CED4DA;
+  color: #2962FF;
+  text-shadow: 2px 2px 4px #B2EBF2;
   font-size: 2.5em;
   transition: color 0.3s, text-shadow 0.3s;
 }
 
 body.dark-mode h1 {
-  color: #E9ECEF;
+  color: #82B1FF;
   text-shadow: 2px 2px 4px #000;
 }
 
 h2 {
-  color: #375A7E;
+  color: #00838F;
   font-size: 2em;
   transition: color 0.3s;
 }
 
 body.dark-mode h2 {
-  color: #89B3DA;
+  color: #4DD0E1;
 }
 
 h3 {
-  color: #2E8B57;
+  color: #388E3C;
   font-size: 1.6em;
   transition: color 0.3s;
 }
 
 body.dark-mode h3 {
-  color: #90EE90;
+  color: #81C784;
 }
 
 /* Paragraphs */
@@ -72,37 +72,36 @@ p {
   font-size: 17px;
   line-height: 1.7;
   letter-spacing: 0.6px;
-  color: #495057;
   transition: color 0.3s;
 }
 
 body.dark-mode p {
-  color: #DEE3E6;
+  color: #CFD8DC;
 }
 
 /* Links */
 a {
-  color: #007bff;
+  color: #1976D2;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 body.dark-mode a {
-  color: #90caf9;
+  color: #90CAF9;
 }
 
 a:hover {
   text-decoration: underline;
-  color: #0056b3;
+  color: #0D47A1;
 }
 
 body.dark-mode a:hover {
-  color: #66a3ff;
+  color: #64B5F6;
 }
 
 /* Collapsible button styles */
 .collapsible {
-  background-color: #CFD8DC;
+  background-color: #B2EBF2;
   color: #212529;
   cursor: pointer;
   padding: 12px;
@@ -111,25 +110,23 @@ body.dark-mode a:hover {
   text-align: left;
   outline: none;
   font-size: 17px;
-  border-radius: 8px;
+  border-radius: 6px;
   margin-bottom: 3px;
   transition: background-color 0.3s ease, color 0.3s;
   font-weight: bold;
-  position: relative;
-  overflow: hidden;
 }
 
 body.dark-mode .collapsible {
-  background-color: #6C757D;
-  color: #E9ECEF;
+  background-color: #616161;
+  color: #ECEFF1;
 }
 
 .collapsible:hover {
-  background-color: #B0BEC5;
+  background-color: #80DEEA;
 }
 
 body.dark-mode .collapsible:hover {
-  background-color: #5A6268;
+  background-color: #757575;
 }
 
 .collapsible:after {
@@ -137,12 +134,12 @@ body.dark-mode .collapsible:hover {
   font-size: 18px;
   float: right;
   margin-left: 5px;
-  color: #495057;
+  color: #555;
   transition: color 0.3s;
 }
 
 body.dark-mode .collapsible:after {
-  color: #E9ECEF;
+  color: #ccc;
 }
 
 .collapsible.active:after {
@@ -155,13 +152,13 @@ body.dark-mode .collapsible:after {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease-out, background-color 0.3s;
-  background-color: #F8F9FA;
-  border-radius: 8px;
+  background-color: #E0F7FA;
+  border-radius: 6px;
   margin-bottom: 6px;
 }
 
 body.dark-mode .content {
-  background-color: #495057;
+  background-color: #484848;
 }
 
 /* Table styles */
@@ -175,69 +172,70 @@ th,
 td {
   padding: 10px 12px;
   text-align: left;
-  border-bottom: 1px solid #CED4DA;
+  border-bottom: 1px solid #80CBC4;
   transition: border-color 0.3s, color 0.3s;
 }
 
 body.dark-mode th,
 body.dark-mode td {
-  border-color: #6C757D;
-  color: #DEE3E6;
+  border-color: #666;
+  color: #CFD8DC;
 }
 
 th {
-  background-color: #CED4DA;
-  color: #343a40;
+  background-color: #80CBC4;
+  color: #212529;
   font-weight: bold;
   transition: background-color 0.3s, color 0.3s;
 }
 
 body.dark-mode th {
-  background-color: #6C757D;
-  color: #E9ECEF;
+  background-color: #757575;
+  color: #ECEFF1;
 }
 
 /* Code block styles */
 pre {
-  background-color: #F8F9FA;
-  border-radius: 8px;
+  background-color: #F5F5F5;
+  border-radius: 6px;
   padding: 12px;
   overflow-x: auto;
   font-family: 'Courier New', monospace;
-  border: 2px solid #ADB5BD;
+  border: 1px solid #BDBDBD;
   transition: background-color 0.3s, border-color 0.3s;
+  color: #212121;
 }
 
 body.dark-mode pre {
-  background-color: #6C757D;
-  border-color: #6C757D;
-  color: #DEE3E6;
+  background-color: #616161;
+  border-color: #9E9E9E;
+  color: #212121;
 }
 
 code {
-  color: #2E7D32;
+  color: #212121;
   font-size: 15px;
   transition: color 0.3s;
 }
 
 body.dark-mode code {
-  color: #66BB6A;
+  color: #212121;
 }
 
 /* Footer styles */
 footer {
   text-align: center;
   padding: 12px;
-  background-color: #DEE3E6;
-  border-top: 2px solid #ADB5BD;
-  color: #495057;
+  background-color: #E0F2F1;
+  border-top: 1px solid #81D4FA;
+  color: #546E7A;
   transition: background-color 0.3s, border-color 0.3s, color 0.3s;
 }
 
 body.dark-mode footer {
-  background-color: #343a40;
-  border-color: #6C757D;
-  color: #DEE3E6;
+  background-color: #333333;
+  border-color: #64B5F6;
+  color: #B0BEC5;
 }
 
 /* Dyslexia-friendly styles */
@@ -254,9 +252,9 @@ body.dark-mode footer {
 
 /* Pixel Art Button */
 .pixel-button {
-  background-color: #E9ECEF;
-  color: #495057;
-  border: 2px solid #ADB5BD;
+  background-color: #E0E0E0;
+  color: #424242;
+  border: 2px solid #757575;
   padding: 6px 12px;
   font-size: 15px;
   cursor: pointer;
@@ -264,24 +262,22 @@ body.dark-mode footer {
   text-decoration: none;
   display: inline-block;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-  position: relative;
-  overflow: hidden;
 }
 
 body.dark-mode .pixel-button {
-  background-color: #6C757D;
-  color: #E9ECEF;
-  border-color: #6C757D;
+  background-color: #6c757d;
+  color: #ECEFF1;
+  border-color: #6c757d;
 }
 
 .pixel-button:hover {
-  background-color: #DEE2E6;
-  color: #343A40;
-  border-color: #868E96;
+  background-color: #BDBDBD;
+  color: #212121;
+  border-color: #616161;
 }
 
 body.dark-mode .pixel-button:hover {
-  background-color: #5A6268;
+  background-color: #5a6268;
   color: #fff;
   border-color: #495057;
 }
@@ -313,34 +309,34 @@ li {
   padding: 10px 15px;
   border-radius: 8px;
   font-weight: normal;
-  color: #343a40;
+  color: #212529;
   transition: background-color 0.3s, color 0.3s;
 }
 
 body.dark-mode #wiki-content ol li button.collapsible {
-  color: #E9ECEF;
+  color: #ECEFF1;
 }
 
 #wiki-content ol li button.collapsible:hover {
-  background-color: #B0BEC5;
+  background-color: #80DEEA;
 }
 
 body.dark-mode #wiki-content ol li button.collapsible:hover {
-  background-color: #5A6268;
+  background-color: #777;
 }
 
 /* Section title styling */
 #wiki-content .content h2 {
-  color: #375A7E;
-  border-bottom: 2px solid #CED4DA;
+  color: #00838F;
+  border-bottom: 2px solid #80CBC4;
   padding-bottom: 5px;
   margin-top: 15px;
   transition: border-color 0.3s, color 0.3s;
 }
 
 body.dark-mode #wiki-content .content h2 {
-  border-color: #6C757D;
-  color: #89B3DA;
+  border-color: #666;
+  color: #4DD0E1;
 }
 
 /* Section paragraph styling */
@@ -350,47 +346,49 @@ body.dark-mode #wiki-content .content h2 {
 }
 
 body.dark-mode #wiki-content .content p {
-  color: #DEE3E6;
+  color: #CFD8DC;
 }
 
 /* Updated code block styling within sections */
 #wiki-content .content pre {
-  background-color: #F8F9FA;
-  border: 2px solid #ADB5BD;
-  border-radius: 8px;
+  background-color: #FFFFFF;
+  border: 1px solid #BDBDBD;
+  border-radius: 5px;
   padding: 10px;
   overflow-x: auto;
   font-family: 'Courier New', monospace;
   font-size: 14px;
   transition: background-color 0.3s, border-color 0.3s;
+  color: #212121;
 }
 
 body.dark-mode #wiki-content .content pre {
-  background-color: #6C757D;
-  border-color: #6C757D;
+  background-color: #616161;
+  border-color: #9E9E9E;
+  color: #000000;
 }
 
 #wiki-content .content code {
-  color: #343a40;
+  color: #212121;
   transition: color 0.3s;
 }
 
 body.dark-mode #wiki-content .content code {
-  color: #E9ECEF;
+  color: #000000;
 }
 
 /* Header Styles */
 header {
   text-align: center;
   padding: 20px;
-  background-color: #DEE3E6;
-  border-bottom: 2px solid #ADB5BD;
+  background-color: #E0F2F1;
+  border-bottom: 1px solid #81D4FA;
   transition: background-color 0.3s, border-color 0.3s;
 }
 
 body.dark-mode header {
-  background-color: #343a40;
-  border-color: #6C757D;
+  background-color: #333333;
+  border-color: #64B5F6;
 }
 
 header h1 {
@@ -399,22 +397,22 @@ header h1 {
 
 header h2 {
   margin-top: 0;
-  color: #375A7E;
+  color: #00838F;
   transition: color 0.3s;
 }
 
 body.dark-mode header h2 {
-  color: #89B3DA;
+  color: #4DD0E1;
 }
 
 header p {
-  color: #495057;
+  color: #546E7A;
   margin-bottom: 15px;
   transition: color 0.3s;
 }
 
 body.dark-mode header p {
-  color: #DEE3E6;
+  color: #B0BEC5;
 }
 
 /* Button Container */
@@ -422,24 +420,4 @@ body.dark-mode header p {
   display: flex;
   justify-content: center;
   gap: 10px;
-}
-
-/* Ripple Effect */
-.ripple {
-  position: absolute;
-  border-radius: 50%;
-  transform: scale(0);
-  animation: ripple 0.6s linear;
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-body.dark-mode .ripple {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-@keyframes ripple {
-  to {
-    transform: scale(4);
-    opacity: 0;
-  }
 }
