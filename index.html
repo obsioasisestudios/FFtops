@@ -1,0 +1,458 @@
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FFTopPlugin - Wiki Oficial</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+  <style>
+    /* Style for the collapsible sections */
+    .collapsible {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #4af;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 1.2em;
+      border-bottom: 1px solid rgba(74, 170, 255, 0.2);
+      border-radius: 5px;
+      margin-bottom: 5px;
+      text-shadow: 0 0 5px #4af;
+      transition: background-color 0.3s ease;
+    }
+
+    .active,
+    .collapsible:hover {
+      background-color: rgba(74, 170, 255, 0.2);
+    }
+
+    .content {
+      padding: 0 18px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      background-color: rgba(0, 0, 0, 0.8);
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+
+    .collapsible:after {
+      content: '\02795';
+      /* Unicode character for "plus" sign (+) */
+      font-size: 1.2em;
+      color: white;
+      float: right;
+      margin-left: 5px;
+    }
+
+    .active:after {
+      content: "\2796";
+      /* Unicode character for "minus" sign (-) */
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="galaxy-background"></div>
+
+  <header>
+    <h1 class="neon-blue">FFTopPlugin</h1>
+    <h2 class="floating-purple">Wiki Oficial</h2>
+    <p class="floating-purple">Guía y documentación para FFTopPlugin</p>
+    <button class="holographic-button">🚀 Descargar Ahora</button>
+  </header>
+
+  <div id="wiki-content">
+    <h1>📖 FFTopPlugin - Wiki Oficial</h1>
+
+    <h2>📚 Tabla de Contenidos</h2>
+    <ol>
+      <li><a href="#introduccion">📌 Introducción</a></li>
+      <li><a href="#instalacion">🔧 Instalación</a></li>
+      <li><a href="#comandos">🎮 Comandos</a></li>
+      <li><a href="#npcs">🤖 NPCs y Hologramas</a></li>
+      <li><a href="#configuracion">📂 Configuración (config.yml)</a></li>
+    </ol>
+    <div id="language-selector">
+        🌎 <select id="translate-dropdown">
+          <option value="es">Español</option>
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+          <option value="de">Deutsch</option>
+          <option value="pt">Português</option>
+        </select>
+      </div>
+      
+    <button type="button" class="collapsible">📌 Introducción</button>
+    <div class="content">
+      <section id="introduccion">
+        <h2>📌 Introducción</h2>
+        <p><strong>FFTopPlugin</strong> es un complemento avanzado diseñado para servidores de Minecraft que desean llevar un registro detallado y visualmente atractivo de las estadísticas de sus jugadores. Este plugin permite la recopilación y presentación de datos de asesinatos, muertes y bloques minados, asegurando una competencia sana y emocionante entre los jugadores.</p>
+
+        <h3>🔹 ¿Qué hace FFTopPlugin?</h3>
+        <p>FFTopPlugin gestiona y muestra estadísticas de los jugadores en tiempo real, utilizando NPCs y hologramas para representar el ranking de los mejores jugadores en cada categoría. Con una interfaz sencilla y comandos intuitivos, los administradores pueden configurar y personalizar la forma en que se presentan estos datos en el servidor.</p>
+
+        <h3>🔹 Características principales</h3>
+        <ul>
+          <li>Registro automático de estadísticas como <strong>asesinatos, muertes y bloques minados</strong>.</li>
+          <li>Creación de <strong>NPCs interactivos</strong> con el soporte de Citizens, mostrando a los mejores jugadores del servidor.</li>
+          <li>Integración con <strong>PlaceholderAPI</strong>, permitiendo utilizar los datos del plugin en otras partes del servidor.</li>
+          <li>Comandos accesibles para los jugadores y herramientas avanzadas de administración para moderadores.</li>
+          <li>Configuración completamente personalizable mediante <code>config.yml</code>, permitiendo modificar mensajes, formato de hologramas y más.</li>
+          <li>Compatibilidad con versiones de <strong>Spigot y Paper</strong> desde 1.16 hasta 1.20+.</li>
+        </ul>
+
+        <h3>🔹 ¿Por qué usar FFTopPlugin?</h3>
+        <p>Los servidores de Minecraft competitivos y basados en estadísticas se benefician enormemente de un sistema de ranking automatizado. FFTopPlugin no solo proporciona una manera eficiente de rastrear estadísticas, sino que también mejora la experiencia visual y competitiva del servidor, motivando a los jugadores a mejorar su rendimiento y alcanzar los primeros lugares en las tablas de clasificación.</p>
+      </section>
+    </div>
+
+    <button type="button" class="collapsible">🔧 Instalación</button>
+    <div class="content">
+      <section id="instalacion">
+        <h2>🔧 Instalación</h2>
+        <ol>
+          <li>Descarga el archivo <strong>FFTopPlugin.jar</strong> y colócalo en la carpeta <code>plugins</code> de tu servidor.</li>
+          <li>Asegúrate de tener instalado <strong>Citizens</strong> y <strong>PlaceholderAPI</strong> (opcional para placeholders).</li>
+          <li>Reinicia el servidor para generar los archivos de configuración.</li>
+          <li>Edita el archivo <code>config.yml</code> según tus preferencias.</li>
+          <li>¡Listo! Usa <code>/fftop</code> para comenzar.</li>
+        </ol>
+      </section>
+    </div>
+
+    <button type="button" class="collapsible">🎮 Comandos</button>
+    <div class="content">
+      <section id="comandos">
+        <h2>🎮 Comandos</h2>
+        <p>FFTopPlugin proporciona una serie de comandos útiles tanto para jugadores como para administradores del servidor. A continuación, se presentan los comandos disponibles junto con ejemplos detallados de uso:</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Comando</th>
+              <th>Descripción</th>
+              <th>Permiso</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>/fftop kills</code></td>
+              <td>Muestra el ranking de asesinatos.</td>
+              <td><code>fftop.use</code></td>
+            </tr>
+            <tr>
+              <td><code>/fftop deaths</code></td>
+              <td>Muestra el ranking de muertes.</td>
+              <td><code>fftop.use</code></td>
+            </tr>
+            <tr>
+              <td><code>/fftop blocks</code></td>
+              <td>Muestra el ranking de bloques minados.</td>
+              <td><code>fftop.use</code></td>
+            </tr>
+            <tr>
+              <td><code>/fftop leaderboard</code></td>
+              <td>Muestra el top general.</td>
+              <td><code>fftop.use</code></td>
+            </tr>
+            <tr>
+              <td><code>/fftop reset &lt;jugador&gt;</code></td>
+              <td>Reinicia las estadísticas de un jugador.</td>
+              <td><code>fftop.admin</code></td>
+            </tr>
+            <tr>
+              <td><code>/fftop select</code></td>
+              <td>Selecciona un NPC cercano para editarlo.</td>
+              <td><code>fftop.admin</code></td>
+            </tr>
+            <tr>
+              <td><code>/fftop remove</code></td>
+              <td>Elimina el NPC seleccionado y su holograma.</td>
+              <td><code>fftop.admin</code></td>
+            </tr>
+            <tr>
+              <td><code>/fftop reload</code></td>
+              <td>Recarga la configuración y datos del plugin.</td>
+              <td><code>fftop.admin</code></td>
+            </tr>
+            <tr>
+              <td><code>/create top &lt;tipo&gt; &lt;posición&gt;</code></td>
+              <td>Crea un NPC con un holograma mostrando un jugador en el ranking.</td>
+              <td><code>fftop.create</code></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>📌 Ejemplos de Uso</h3>
+        <ol>
+          <li><strong>Mostrar el ranking de asesinatos</strong>
+            <pre><code>/fftop kills</code></pre>
+            <p><em>Muestra el top de jugadores con más asesinatos.</em></p>
+          </li>
+          <li><strong>Mostrar el ranking de muertes</strong>
+            <pre><code>/fftop deaths</code></pre>
+            <p><em>Muestra el top de jugadores con más muertes.</em></p>
+          </li>
+          <li><strong>Mostrar el ranking de bloques minados</strong>
+            <pre><code>/fftop blocks</code></pre>
+            <p><em>Muestra el top de jugadores con más bloques minados.</em></p>
+          </li>
+          <li><strong>Restablecer las estadísticas de un jugador</strong>
+            <pre><code>/fftop reset Steve</code></pre>
+            <p><em>Restablece las estadísticas del jugador llamado Steve.</em></p>
+          </li>
+          <li><strong>Seleccionar un NPC cercano</strong>
+            <pre><code>/fftop select</code></pre>
+            <p><em>Selecciona un NPC cercano para editarlo o eliminarlo.</em></p>
+          </li>
+          <li><strong>Eliminar un NPC seleccionado y su holograma</strong>
+            <pre><code>/fftop remove</code></pre>
+            <p><em>Elimina el NPC seleccionado junto con su holograma.</em></p>
+          </li>
+          <li><strong>Recargar la configuración del plugin</strong>
+            <pre><code>/fftop reload</code></pre>
+            <p><em>Recarga los archivos de configuración y datos del plugin.</em></p>
+          </li>
+          <li><strong>Crear un NPC con el jugador en el primer lugar del ranking de asesinatos</strong>
+            <pre><code>/create top kills 1</code></pre>
+            <p><em>Genera un NPC en la ubicación actual del jugador que muestra al jugador número 1 en asesinatos.</em></p>
+          </li>
+          <li><strong>Crear un NPC con el jugador en la tercera posición del ranking de bloques minados</strong>
+            <pre><code>/create top blocks 3</code></pre>
+            <p><em>Genera un NPC mostrando al jugador que ocupa la tercera posición en el ranking de bloques minados.</em></p>
+          </li>
+          <li><strong>Ver la tabla de clasificación general</strong>
+            <pre><code>/fftop leaderboard</code></pre>
+            <p><em>Muestra la clasificación combinada de los mejores jugadores en todas las estadísticas.</em></p>
+          </li>
+        </ol>
+
+        <p>Con estos comandos, los jugadores y administradores pueden gestionar fácilmente la clasificación de estadísticas y personalizar la experiencia del servidor.</p>
+      </section>
+    </div>
+
+    <button type="button" class="collapsible">🤖 NPCs y Hologramas</button>
+    <div class="content">
+      <section id="npcs">
+        <h2>🤖 NPCs y Hologramas</h2>
+        <p>FFTopPlugin permite la creación de NPCs que representan a los jugadores más destacados en diferentes categorías (asesinatos, muertes y bloques minados). Estos NPCs se generan con el soporte del plugin Citizens y pueden incluir hologramas personalizados sobre sus cabezas para mostrar información relevante.</p>
+
+        <h3>📌 ¿Cómo crear un NPC con holograma?</h3>
+        <p>Para crear un NPC con un holograma que muestre el ranking de los jugadores, usa el siguiente comando:</p>
+
+        <pre><code class="language-bash">/create top &lt;tipo&gt; &lt;posición&gt;</code></pre>
+        <p>Ejemplo:</p>
+        <pre><code class="language-bash">/create top kills 1</code></pre>
+        <p>Este comando generará un NPC en tu ubicación que representa al jugador con más asesinatos en el servidor.</p>
+
+        <h3>📌 Características de los NPCs generados</h3>
+        <ul>
+          <li><strong>Apariencia:</strong> Se pueden personalizar con skins basadas en los jugadores reales del top.</li>
+          <li><strong>Actualización Automática:</strong> El plugin actualiza la información periódicamente para reflejar cambios en el ranking.</li>
+          <li><strong>Compatibilidad con Hologramas:</strong> Se pueden agregar líneas de texto personalizadas sobre el NPC para mostrar estadísticas.</li>
+        </ul>
+
+        <h3>📌 Configuración de Hologramas</h3>
+        <p>Los hologramas pueden ser configurados desde el archivo <code>config.yml</code>. Permiten mostrar información en capas flotantes sobre los NPCs. Aquí tienes un ejemplo de cómo modificar las líneas que aparecen sobre los NPCs:</p>
+        <pre><code class="language-yaml">
+hologram:
+  initial-height: 1.5
+  lines:
+    - "&6=== Estadísticas ==="
+    - "&eJugador: %player%"
+    - "&aRanking: %position%"
+    - "&bPuntos: %value%"
+</code></pre>
+
+        <h3>📌 Ejemplos de Configuración de Hologramas</h3>
+        <p>Mostrar un mensaje personalizado en los hologramas:</p>
+        <pre><code class="language-yaml">
+hologram:
+  lines:
+    - "&b🌟 Mejor Jugador 🌟"
+    - "&e%player%"
+    - "&cPosición: %position%"
+    - "&aPuntaje: %value%"
+</code></pre>
+        <p>Este formato resalta al mejor jugador con un diseño llamativo.</p>
+
+        <p>Añadir bordes decorativos en los hologramas:</p>
+        <pre><code class="language-yaml">
+hologram:
+  lines:
+    - "&m=================="
+    - "&e%player%"
+    - "&6Posición: %position%"
+    - "&f%type%: %value%"
+    - "&m=================="
+</code></pre>
+        <p>Usar líneas de separación mejora la visibilidad del holograma.</p>
+
+        <p>Reducir la cantidad de información mostrada:</p>
+        <pre><code class="language-yaml">
+hologram:
+  lines:
+    - "&eTop %type%"
+    - "&a%player%"
+</code></pre>
+        <p>Útil para servidores que prefieren menos texto en pantalla.</p>
+
+        <p>Ajustar la altura del holograma para mayor visibilidad:</p>
+        <pre><code class="language-yaml">
+hologram:
+  initial-height: 2.0  # Aumenta la altura para evitar que se solape con el NPC
+</code></pre>
+        <p>Si los hologramas aparecen demasiado bajos, puedes ajustar esta configuración.</p>
+
+        <p>Desactivar hologramas en NPCs específicos:</p>
+        <pre><code class="language-yaml">
+hologram:
+  enabled: false
+</code></pre>
+        <p>Si prefieres no usar hologramas en ciertos NPCs, esta opción los desactiva.</p>
+
+        <h3>📌 Ejemplos de Uso</h3>
+        <p>Crear un NPC para el primer puesto de asesinatos:</p>
+        <pre><code class="language-bash">/create top kills 1</code></pre>
+        <p>Crea un NPC con un holograma mostrando el jugador con más asesinatos.</p>
+
+        <p>Crear un NPC para el tercer puesto de bloques minados:</p>
+        <pre><code class="language-bash">/create top blocks 3</code></pre>
+        <p>Muestra al jugador en la tercera posición del ranking de bloques minados.</p>
+
+        <p>Eliminar un NPC y su holograma correctamente:</p>
+        <pre><code class="language-bash">/fftop remove</code></pre>
+        <p>Este comando borra el NPC y su holograma. No uses comandos normales de Citizens, ya que dejarán hologramas flotando.</p>
+
+        <p>Seleccionar un NPC para edición:</p>
+        <pre><code class="language-bash">/fftop select</code></pre>
+        <p>Te permite seleccionar un NPC cercano para administrarlo.</p>
+
+        <p>Actualizar manualmente los NPCs del top:</p>
+        <pre><code class="language-bash">/fftop reload</code></pre>
+        <p>Recarga la configuración y actualiza los datos mostrados en los NPCs.</p>
+
+        <h3>❗ Importante sobre la eliminación de NPCs</h3>
+        <p>Si eliminas los NPCs con los comandos normales de Citizens, los hologramas NO se eliminarán correctamente y quedarán flotando en el aire. Para eliminarlos de forma segura, usa el comando:</p>
+        <pre><code class="language-bash">/fftop remove</code></pre>
+        <p>Este comando se asegura de borrar tanto el NPC como su holograma, evitando errores visuales en el servidor.</p>
+
+        <p>Los NPCs y hologramas son una forma efectiva de resaltar a los mejores jugadores del servidor, agregando un aspecto visual atractivo y competitivo.</p>
+      </section>
+    </div>
+
+    <button type="button" class="collapsible">📂 Configuración (config.yml)</button>
+    <div class="content">
+      <section id="configuracion">
+        <h2>📂 Configuración (config.yml)</h2>
+        <p>El archivo de configuración <code>config.yml</code> permite personalizar todos los aspectos del plugin, desde los mensajes que aparecen en el chat hasta la apariencia de los hologramas y la funcionalidad de los menús. A continuación, te mostramos algunos ejemplos detallados de configuración y sus efectos en el servidor.</p>
+
+        <h3>📌 Ejemplos de configuración y ajustes</h3>
+
+        <h4>Modificar los mensajes del plugin</h4>
+        <pre><code class="language-yaml">
+messages:
+  command-player-only: "&cEste comando solo está disponible para jugadores."
+  npc-created: "&aNPC de estadísticas creado correctamente!"
+  stats-reset: "&aLas estadísticas de %player% han sido reiniciadas."
+</code></pre>
+        <p>Cambia los mensajes que el plugin envía al chat para mayor personalización.</p>
+
+        <h4>Ajustar la altura de los hologramas sobre los NPCs</h4>
+        <pre><code class="language-yaml">
+hologram:
+  initial-height: 1.5  # Ajusta la altura del holograma sobre el NPC
+</code></pre>
+        <p>Si los hologramas aparecen muy altos o bajos, este ajuste te ayudará.</p>
+
+        <h4>Modificar el contenido de los hologramas</h4>
+        <pre><code class="language-yaml">
+hologram:
+  lines:
+    - "&6=== Estadísticas ==="
+    - "&eJugador: %player%"
+    - "&aRanking: %position%"
+    - "&bPuntos: %value%"
+</code></pre>
+        <p>Personaliza los textos de los hologramas que aparecen sobre los NPCs.</p>
+
+        <h4>Configurar los títulos de los menús de clasificación</h4>
+        <pre><code class="language-yaml">
+menu:
+  titles:
+    kills: "&cTop Asesinos"
+    deaths: "&4Top Muertes"
+    blocks: "&6Top Mineros"
+</code></pre>
+        <p>Define el título que verán los jugadores cuando abran un menú de estadísticas.</p>
+
+        <h4>Personalizar el relleno de los menús</h4>
+        <pre><code class="language-yaml">
+menu:
+  filler:
+    material: "GRAY_STAINED_GLASS_PANE"
+    name: " "
+</code></pre>
+        <p>Cambia el material de los espacios vacíos en los menús.</p>
+
+        <h4>Ajustar el intervalo de actualización automática de datos</h4>
+        <pre><code class="language-yaml">
+update-interval: 10
+</code></pre>
+        <p>Controla cada cuántos segundos se actualizan los datos de los NPCs.</p>
+
+        <h4>Configurar el formato del leaderboard</h4>
+        <pre><code class="language-yaml">
+messages:
+  leaderboard-title: "&6=== Ranking General ==="
+  leaderboard-entry: "&e%player%: &f%value%"
+</code></pre>
+        <p>Personaliza el formato en que se muestra la tabla de clasificación en el chat.</p>
+
+        <h4>Eliminar registros innecesarios en consola</h4>
+        <pre><code class="language-yaml">
+logs:
+  enabled: false
+</code></pre>
+        <p>Si no quieres ver mensajes del plugin en la consola, puedes desactivarlos.</p>
+      </section>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 FFTopPlugin. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/21.6.12/i18next.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+  <script>
+    hljs.highlightAll();
+
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
